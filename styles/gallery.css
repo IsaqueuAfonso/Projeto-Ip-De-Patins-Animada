@@ -21,8 +21,8 @@ section.gallery {
     margin-top: 2rem;
     display: grid;
     grid-template-areas:
-      'A B B'
-      'C C D';
+      "A B B"
+      "C C D";
 
     gap: 2.5rem;
   }
@@ -107,5 +107,35 @@ section.gallery {
   from {
     opacity: 0;
     transform: translateY(100%);
+  }
+}
+
+@media (max-width: 22.5rem) {
+  section.gallery {
+    padding: 1.5rem 1.5rem;
+
+    & header {
+      & h2 {
+        margin-top: 0.5rem;
+      }
+    }
+
+    & .content {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-areas:
+        "A"
+        "B"
+        "C"
+        "D";
+
+      gap: 1.5rem;
+    }
+
+    & figure {
+      & > img {
+        height: 16rem;
+      }
+    }
   }
 }

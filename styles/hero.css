@@ -96,7 +96,7 @@ section.hero {
       width: 100%;
     }
 
-    & img[src*='ellipse'] {
+    & img[src*="ellipse"] {
       width: 94%;
       top: 3%;
       left: 3%;
@@ -105,14 +105,14 @@ section.hero {
       animation: slideIn 3s 200ms ease forwards;
     }
 
-    & img[src*='patins'] {
+    & img[src*="patins"] {
       z-index: 1;
 
       transform: translateX(200%);
       animation: slideIn 3s ease forwards;
     }
 
-    & img[src*='stars-1'] {
+    & img[src*="stars-1"] {
       max-width: 5.5rem;
       top: 30%;
       z-index: 0;
@@ -122,7 +122,7 @@ section.hero {
       animation: slideIn 2s 800ms ease forwards, appear 100ms 800ms forwards;
     }
 
-    & img[src*='stars-2'] {
+    & img[src*="stars-2"] {
       max-width: 2.5rem;
       right: 0;
       bottom: 35%;
@@ -221,5 +221,84 @@ section.hero {
 
   100% {
     transform: translateY(-15rem);
+  }
+}
+
+@media (max-width: 22.5rem) {
+  section.hero {
+    padding: 1.5rem 1rem;
+    flex-direction: column-reverse;
+    & .buttons {
+      max-width: 17.75rem;
+      gap: 1.5rem;
+      flex-direction: column-reverse;
+    }
+    & h1 div {
+      height: 2.5rem;
+    }
+    & > div:nth-child(2) {
+      max-width: 19.5rem;
+      height: 19.5rem;
+    }
+  }
+
+  @keyframes slideUp {
+    /* radical static */
+    0%,
+    22% {
+      transform: translateY(0);
+    }
+    /* divertida in */
+    23% {
+      transform: translateY(calc(-2.5rem - 15px));
+    }
+    25% {
+      transform: translateY(calc(-2.5rem + 10px));
+    }
+    27% {
+      transform: translateY(calc(-2.5rem - 5px));
+    }
+    29% {
+      transform: translateY(calc(-2.5rem + 5px));
+    }
+    /* divertida static */
+    33%,
+    55% {
+      transform: translateY(-2.5rem);
+    }
+    /* saudável in */
+    56% {
+      transform: translateY(calc(-5rem - 15px));
+    }
+    58% {
+      transform: translateY(calc(-5rem + 10px));
+    }
+    60% {
+      transform: translateY(calc(-5rem - 5px));
+    }
+    62% {
+      transform: translateY(calc(-5rem + 5px));
+    }
+    /* saudável static */
+    66%,
+    88% {
+      transform: translateY(-5rem);
+    }
+    /* radical in */
+    89% {
+      transform: translateY(calc(-7.5rem - 15px));
+    }
+    91% {
+      transform: translateY(calc(-7.5rem + 10px));
+    }
+    93% {
+      transform: translateY(calc(-7.5rem - 5px));
+    }
+    95% {
+      transform: translateY(calc(-7.5rem + 5px));
+    }
+    100% {
+      transform: translateY(-7.5rem);
+    }
   }
 }
